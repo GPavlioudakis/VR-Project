@@ -27,7 +27,7 @@ public class TargetTracking : MonoBehaviour
             else
             {
                 spriteRenderer.enabled = true;//Activates the market
-                trackTarget(target);//Tracks the target
+                TrackTarget(target);//Tracks the target
             }
         }
     }
@@ -39,7 +39,7 @@ public class TargetTracking : MonoBehaviour
         return targetRenderer.isVisible;
     }
 
-    void trackTarget(GameObject target)
+    void TrackTarget(GameObject target)
     {
         Vector3 targetPosition = target.transform.position;
         Vector3 targetPositionFromCamera = targetPosition - Camera.main.transform.position;//Target position relative to camera position
